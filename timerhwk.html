@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Timing</title>
+    
+    <style>
+        div {
+            text-align: center;
+            font-size: 100px;
+            padding: 100px;
+        }
+        
+        button {
+            display: block;
+            margin: 50px auto;
+            width: 500px;
+            height: 100px;
+            font-size: 30px;
+        }
+        
+        span {
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="toggleTiming()">Timing start</button>
+    <div id="demo"></div>
+
+    <script>
+        var oBody = document.getElementById("demo");
+        var intervalId;  // 用于存储计时器ID
+        var seconds = 0;  // 计时器的初始秒数
+        var isTiming = false;  // 是否正在计时
+        var count = 0;  // 点击计数
+        
+        function toggleTiming() {
+            count++;  // 每次点击计数加1
+            
+            if (count % 2 === 1) {
+                // 奇数次点击，延续计时
+                startTiming();
+            } else {
+                // 偶数次点击，暂停计时
+                pauseTiming();
+            }
+        }
+        
+        function startTiming() {
+            if (!isTiming) {
+                isTiming = true;
+                intervalId = setInterval(updateNum, 1000);
+            }
+        }
+        
+        function pauseTiming() {
+            if (isTiming) {
+                isTiming = false;
+                clearInterval(intervalId);
+            }
+        }
+        
+        function updateNum() {
+            seconds++;
+            oBody.innerHTML = "Time passed: " + "<span>" + seconds + "</span>" + " s";
+        }
+    </script>
+</body>
+</html>
