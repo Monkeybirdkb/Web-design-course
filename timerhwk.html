@@ -30,19 +30,17 @@
 
     <script>
         var oBody = document.getElementById("demo");
-        var intervalId;  // 用于存储计时器ID
-        var seconds = 0;  // 计时器的初始秒数
-        var isTiming = false;  // 是否正在计时
-        var count = 0;  // 点击计数
+        var intervalId; 
+        var seconds = 0; 
+        var isTiming = false; 
+        var count = 0; 
         
         function toggleTiming() {
-            count++;  // 每次点击计数加1
+            count++; 
             
             if (count % 2 === 1) {
-                // 奇数次点击，延续计时
-                startTiming();
+              startTiming();
             } else {
-                // 偶数次点击，暂停计时
                 pauseTiming();
             }
         }
