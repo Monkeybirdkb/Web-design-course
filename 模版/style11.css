@@ -1,0 +1,320 @@
+
+		/* 通用样式 */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+p {
+    margin: 0;
+}
+
+/* 页面布局 */
+#wrapper {
+    display: flex;
+}
+
+#main {
+    flex: 1;
+}
+
+#sidebar {
+    flex-basis: 300px;
+    background-color: #f3f3f3;
+}
+
+.inner {
+    padding: 3em;
+}
+
+/* 头部样式 */
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .logo {
+    font-family: 'Lobster', cursive;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+#header .logo:hover {
+    color: #ff9900;
+}
+
+#header .icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#header .icons li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+#header .icons li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Banner 样式 */
+#banner {
+    background-color: #f3f3f3;
+    padding: 3em;
+    display: flex;
+    align-items: center;
+}
+
+#banner .content {
+    flex: 1;
+}
+
+#banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+#banner p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+#banner .button {
+    background-color: #ff9900;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8em 1.5em;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+#banner .button:hover {
+    background-color: #e68100;
+}
+
+#banner .image {
+    flex: 1;
+    text-align: center;
+}
+
+#banner .image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Section 样式 */
+section {
+    padding: 3em 0;
+}
+
+section header.major {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+section header.major h2 {
+    font-size: 2em;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.features article {
+    flex: 1 0 50%;
+    padding: 1em;
+}
+
+.features article .content {
+    margin-top: 1em;
+}
+
+.features article h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.features article p {
+    margin-bottom: 1em;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.posts article {
+    flex: 1 0 50%;
+    padding: 1em;
+}
+
+.posts article h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.posts article p {
+    margin-bottom: 1em;
+}
+
+.posts article .button {
+    background-color: #ff9900;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8em 1.5em;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.posts article .button:hover {
+    background-color: #e68100;
+}
+
+/* Sidebar 样式 */
+#sidebar .inner {
+    padding: 2em;
+}
+
+#search input[type="text"] {
+    width: 100%;
+    padding: 0.8em;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 1em;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 2;
+}
+
+#menu ul li {
+    margin-bottom: 0.5em;
+}
+
+#menu ul li a {
+    display: block;
+    padding: 0.5em 0;
+    color: #333;
+    text-decoration: none;
+	
+}
+
+#menu ul li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  margin-top: 5px;
+}
+
+
+#menu ul li a:hover {
+    color: #ff9900;
+}
+
+#footer {
+    background-color: #8d8a8a;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+.contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact li {
+    margin-bottom: 0.5em;
+}
+
+.contact li a {
+    color: #4f4d4d;
+    text-decoration: none;
+}
+
+.contact li.phone:before {
+    content: "\260E";
+    margin-right: 0.5em;
+	font-size: 15px;
+}
+
+.contact li.home:before {
+    content: "\27b4";
+    margin-right: 0.5em;
+	font-size: 20px;
+}
+
+.contact li.envelope:before {
+    content: "\2709";
+    margin-right: 0.5em;
+	font-size: 25px;
+}
+
+/* 响应式布局 */
+@media (max-width: 980px) {
+    #wrapper {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        flex-basis: auto;
+    }
+}
+
+@media (max-width: 736px) {
+    #header .icons {
+        display: none;
+    }
+
+    #banner {
+        flex-direction: column;
+    }
+
+    #banner .content {
+        order: 2;
+        text-align: center;
+        margin-top: 2em;
+    }
+
+    #banner .image {
+        order: 1;
+    }
+
+    .features article,
+    .posts article {
+        flex: 1 0 100%;
+    }
+
+    #footer {
+        padding: 1em 0;
+    }
+}
+
